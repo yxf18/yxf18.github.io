@@ -10,16 +10,17 @@
     <title>杨【沪AE11750】</title>
   </head>
   <body>
-    <a id="call" href="tel:18336183560">不好意思妨碍到您了，有事请直接拨打电话！</a>
+    <a id="call" href="tel:18336183560"
+      >不好意思妨碍到您了，有事请直接拨打电话！</a
+    >
     <script>
       document.addEventListener("DOMContentLoaded", async function () {
         const phone = document.getElementById("call");
         const urlParams = new URLSearchParams(window.location.search);
         const urlPhone = urlParams.get("phone");
-        // 如果存在电话参数，则触发点击
-        if (urlPhone) {
-          phone.setAttribute("href", `tel:${urlPhone}`);
-        }
+        const title = urlParams.get("title");
+        urlPhone && phone.setAttribute("href", `tel:${urlPhone}`);
+        title && (document.title = title);
         phone.click();
       });
     </script>
