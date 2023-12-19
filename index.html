@@ -4,12 +4,24 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>call</title>
-</head>
-<body>
-    <a href="tel:18336183560">打电话</a>
-</body>
+  </head>
+  <body>
+    <a id="call" href="tel:18336183560">拨打电话</a>
+    <script>
+      document.addEventListener("DOMContentLoaded", async function () {
+        const phone = document.getElementById("call");
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlPhone = urlParams.get("phone");
+        // 如果存在电话参数，则触发点击
+        if (urlPhone) {
+          phone.setAttribute("href", `tel:${urlPhone}`);
+        }
+        phone.click();
+      });
+    </script>
+  </body>
 </html>
