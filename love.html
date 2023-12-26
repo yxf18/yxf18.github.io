@@ -16,96 +16,32 @@
             margin: auto;
             color: #fff;
         }
+        html, body{
+            width: 100%;
+            height: 100%;
+            background: #000;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
     </style>
 </head>
-
-<style>
-    html,
-    body {
-        height: 100%;
-        padding-top: 10%;
-        margin: 0;
-        background: #000;
-        box-sizing: border-box;
-    }
-
-    img {
-        display: block;
-        margin: 0 auto;
-    }
-
-    label {
-
-        display: block;
-        margin: 0 auto;
-        color: pink;
-        font-size: 20px;
-        padding-right: 5px;
-        /*往左偏移10px*/
-        animation: mymove 2.5s infinite;
-        /* //关联动画名称、动画时长、循环 */
-        /*Safari 和 Chrome:*/
-        -webkit-animation: mymove 2.5s infinite;
-        /* //同上（兼容） */
-    }
-
-    @keyframes mymove {
-        50% {
-            font-size: 40px;
-        }
-
-        /* //名字放大大小 */
-    }
-
-    /*Safari 和 Chrome:*/
-    @-webkit-keyframes mymove {
-        50% {
-            font-size: 40px;
-        }
-
-        /* //名字放大大小 */
-    }
-
-    .middle {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-    }
-
-    .middle2 {
-        position: absolute;
-        z-index: 2;
-        width: 100%;
-        height: 100%;
-        margin: auto;
-
-        display: flex;
-        align-items: center;
-    }
 </style>
 <link rel="stylesheet" href="./style.css">
 
 <body>
     <h1>👑 皇冠宝贝，love you forever!</h1>
-    <div class="container">
-        <span>浪</span>
-        <span>漫</span>
-        <span>的</span>
-        <span>爱</span>
-        <span>心</span>
 
-    </div>
-    <div class="middle">
-        <div class="middle2">
-        </div>
-
-        <img src="./psc.gif"
-            width="854" height="480" />
-    </div>
-
-</body>
-
+    <img src="./psc.gif" style="width: 100%;height: auto;">
 </body>
 
 </html>
