@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Demo</title>
+    <style>
+      body {
+        background-color: #bfe3dd;
+        color: #000;
+      }
+
+      a {
+        color: #2983ff;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <div id="info">
+      <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a>
+      webgl - animation - keyframes<br />
+      Model:
+      <a
+        href="https://artstation.com/artwork/1AGwX"
+        target="_blank"
+        rel="noopener"
+        >Littlest Tokyo</a
+      >
+      by
+      <a href="https://artstation.com/glenatron" target="_blank" rel="noopener"
+        >Glen Fox</a
+      >, CC Attribution.
+    </div>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
