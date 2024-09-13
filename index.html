@@ -1,28 +1,19 @@
-<!--
- * @Author: yangxuefeng yangxuefeng@clinbrain.com
- * @Description: 
--->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>杨【沪AE11750】</title>
+    <title>Document</title>
+    <style>
+      ul > li {
+        font-size: 50px;
+      }
+    </style>
   </head>
   <body>
-    <a id="call" href="tel:18336183560"
-      >不好意思妨碍到您了，有事请直接拨打电话！</a
-    >
-    <script>
-      document.addEventListener("DOMContentLoaded", async function () {
-        const phone = document.getElementById("call");
-        const urlParams = new URLSearchParams(window.location.search);
-        const urlPhone = urlParams.get("phone");
-        const title = urlParams.get("title");
-        urlPhone && phone.setAttribute("href", `tel:${urlPhone}`);
-        title && (document.title = title);
-        phone.click();
-      });
-    </script>
+    <ul>
+      <li><a href="./dnf/index.html">dnfm</a></li>
+      <li>停车码</li>
+    </ul>
   </body>
 </html>
