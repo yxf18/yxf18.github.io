@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dnf 团本记录</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <style>
       * {
         margin: 0;
@@ -13,7 +14,7 @@
         padding: 10px;
       }
       /* 设置占位符样式 */
-      .placeholder {
+      .img_placeholder {
         width: 100%;
         height: auto;
         /* height: 300px; */
@@ -30,93 +31,157 @@
     </style>
   </head>
   <body>
-    <h1 style="text-align: center">dnf 团本记录</h1>
-    <!-- 图片懒加载 -->
-    <div class="container">
-      <h2>2024-09-23</h2>
-      <img class="placeholder" data-src="imgs/42.jpg" />
-      <img class="placeholder" data-src="imgs/43.jpg" />
-      <img class="placeholder" data-src="imgs/44.jpg" />
-      <hr />
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="home-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#home-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="home-tab-pane"
+          aria-selected="true"
+        >
+          普通章鱼
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="profile-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#profile-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="profile-tab-pane"
+          aria-selected="false"
+        >
+          困难章鱼
+        </button>
+      </li>
+    </ul>
 
-      <h2>2024-09-20</h2>
-      <img class="placeholder" data-src="imgs/39.jpg" />
-      <img class="placeholder" data-src="imgs/40.jpg" />
-      <img class="placeholder" data-src="imgs/41.jpg" />
-      <hr />
+    <div class="tab-content" id="myTabContent">
+      <div
+        class="tab-pane fade show active"
+        id="home-tab-pane"
+        role="tabpanel"
+        aria-labelledby="home-tab"
+        tabindex="0"
+      >
+        <!-- 普通章鱼 -->
+        <div class="container">
+          <h2>2024-09-23</h2>
+          <img class="img_placeholder" data-src="imgs/42.jpg" />
+          <img class="img_placeholder" data-src="imgs/43.jpg" />
+          <img class="img_placeholder" data-src="imgs/44.jpg" />
+          <hr />
 
-      <h2>2024-09-16</h2>
-      <img class="placeholder" data-src="imgs/36.jpg" />
-      <img class="placeholder" data-src="imgs/37.jpg" />
-      <img class="placeholder" data-src="imgs/38.jpg" />
-      <hr />
+          <h2>2024-09-20</h2>
+          <img class="img_placeholder" data-src="imgs/39.jpg" />
+          <img class="img_placeholder" data-src="imgs/40.jpg" />
+          <img class="img_placeholder" data-src="imgs/41.jpg" />
+          <hr />
 
-      <h2>2024-09-13</h2>
-      <img class="placeholder" data-src="imgs/33.jpg" />
-      <img class="placeholder" data-src="imgs/34.jpg" />
-      <img class="placeholder" data-src="imgs/35.jpg" />
-      <hr />
+          <h2>2024-09-16</h2>
+          <img class="img_placeholder" data-src="imgs/36.jpg" />
+          <img class="img_placeholder" data-src="imgs/37.jpg" />
+          <img class="img_placeholder" data-src="imgs/38.jpg" />
+          <hr />
 
-      <h2>2024-09-12</h2>
-      <img class="placeholder" data-src="imgs/30.jpg" />
-      <img class="placeholder" data-src="imgs/31.jpg" />
-      <img class="placeholder" data-src="imgs/32.jpg" />
-      <hr />
+          <h2>2024-09-13</h2>
+          <img class="img_placeholder" data-src="imgs/33.jpg" />
+          <img class="img_placeholder" data-src="imgs/34.jpg" />
+          <img class="img_placeholder" data-src="imgs/35.jpg" />
+          <hr />
 
-      <h2>2024-09-03</h2>
-      <img class="placeholder" data-src="imgs/27.jpg" />
-      <img class="placeholder" data-src="imgs/28.jpg" />
-      <img class="placeholder" data-src="imgs/29.jpg" />
-      <hr />
+          <h2>2024-09-12</h2>
+          <img class="img_placeholder" data-src="imgs/30.jpg" />
+          <img class="img_placeholder" data-src="imgs/31.jpg" />
+          <img class="img_placeholder" data-src="imgs/32.jpg" />
+          <hr />
 
-      <h2>2024-08-26</h2>
-      <img class="placeholder" data-src="imgs/24.jpg" />
-      <img class="placeholder" data-src="imgs/25.jpg" />
-      <img class="placeholder" data-src="imgs/26.jpg" />
-      <hr />
+          <h2>2024-09-03</h2>
+          <img class="img_placeholder" data-src="imgs/27.jpg" />
+          <img class="img_placeholder" data-src="imgs/28.jpg" />
+          <img class="img_placeholder" data-src="imgs/29.jpg" />
+          <hr />
 
-      <h2>2024-08-20</h2>
-      <img class="placeholder" data-src="imgs/21.jpg" />
-      <img class="placeholder" data-src="imgs/22.jpg" />
-      <img class="placeholder" data-src="imgs/23.jpg" />
-      <hr />
+          <h2>2024-08-26</h2>
+          <img class="img_placeholder" data-src="imgs/24.jpg" />
+          <img class="img_placeholder" data-src="imgs/25.jpg" />
+          <img class="img_placeholder" data-src="imgs/26.jpg" />
+          <hr />
 
-      <h2>2024-08-14</h2>
-      <img class="placeholder" data-src="imgs/18.jpg" />
-      <img class="placeholder" data-src="imgs/19.jpg" />
-      <img class="placeholder" data-src="imgs/20.jpg" />
-      <hr />
+          <h2>2024-08-20</h2>
+          <img class="img_placeholder" data-src="imgs/21.jpg" />
+          <img class="img_placeholder" data-src="imgs/22.jpg" />
+          <img class="img_placeholder" data-src="imgs/23.jpg" />
+          <hr />
 
-      <h2>2024-08-12</h2>
-      <img class="placeholder" data-src="imgs/15.jpg" />
-      <img class="placeholder" data-src="imgs/16.jpg" />
-      <img class="placeholder" data-src="imgs/17.jpg" />
-      <hr />
+          <h2>2024-08-14</h2>
+          <img class="img_placeholder" data-src="imgs/18.jpg" />
+          <img class="img_placeholder" data-src="imgs/19.jpg" />
+          <img class="img_placeholder" data-src="imgs/20.jpg" />
+          <hr />
 
-      <h2>2024-08-05</h2>
-      <img class="placeholder" data-src="imgs/12.jpg" />
-      <img class="placeholder" data-src="imgs/13.jpg" />
-      <img class="placeholder" data-src="imgs/14.jpg" />
-      <hr />
+          <h2>2024-08-12</h2>
+          <img class="img_placeholder" data-src="imgs/15.jpg" />
+          <img class="img_placeholder" data-src="imgs/16.jpg" />
+          <img class="img_placeholder" data-src="imgs/17.jpg" />
+          <hr />
 
-      <h2>2024-07-29</h2>
-      <img class="placeholder" data-src="imgs/9.jpg" />
-      <img class="placeholder" data-src="imgs/10.jpg" />
-      <img class="placeholder" data-src="imgs/11.jpg" />
-      <hr />
-      <img class="placeholder" data-src="imgs/1.jpg" />
-      <img class="placeholder" data-src="imgs/2.jpg" />
-      <img class="placeholder" data-src="imgs/3.jpg" />
-      <img class="placeholder" data-src="imgs/4.jpg" />
-      <img class="placeholder" data-src="imgs/5.jpg" />
-      <img class="placeholder" data-src="imgs/6.jpg" />
-      <img class="placeholder" data-src="imgs/7.jpg" />
-      <img class="placeholder" data-src="imgs/8.jpg" />
+          <h2>2024-08-05</h2>
+          <img class="img_placeholder" data-src="imgs/12.jpg" />
+          <img class="img_placeholder" data-src="imgs/13.jpg" />
+          <img class="img_placeholder" data-src="imgs/14.jpg" />
+          <hr />
+
+          <h2>2024-07-29</h2>
+          <img class="img_placeholder" data-src="imgs/9.jpg" />
+          <img class="img_placeholder" data-src="imgs/10.jpg" />
+          <img class="img_placeholder" data-src="imgs/11.jpg" />
+          <hr />
+          <img class="img_placeholder" data-src="imgs/1.jpg" />
+          <img class="img_placeholder" data-src="imgs/2.jpg" />
+          <img class="img_placeholder" data-src="imgs/3.jpg" />
+          <img class="img_placeholder" data-src="imgs/4.jpg" />
+          <img class="img_placeholder" data-src="imgs/5.jpg" />
+          <img class="img_placeholder" data-src="imgs/6.jpg" />
+          <img class="img_placeholder" data-src="imgs/7.jpg" />
+          <img class="img_placeholder" data-src="imgs/8.jpg" />
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="profile-tab-pane"
+        role="tabpanel"
+        aria-labelledby="profile-tab"
+        tabindex="0"
+      >
+        <!-- 困难章鱼 -->
+        <div class="container">
+          <h2>2024-09-28</h2>
+          <img class="img_placeholder" data-src="imgs/a4.jpg" />
+          <img class="img_placeholder" data-src="imgs/a5.jpg" />
+          <img class="img_placeholder" data-src="imgs/a6.jpg" />
+          <hr />
+
+          <h2>2024-09-25</h2>
+          <img class="img_placeholder" data-src="imgs/a4.jpg" />
+          <img class="img_placeholder" data-src="imgs/a5.jpg" />
+          <img class="img_placeholder" data-src="imgs/a6.jpg" />
+          <hr />
+        </div>
+      </div>
     </div>
+
+    <script src="./js/bootstrap.min.js"></script>
 
     <script>
       // 获取所有带有懒加载标记的图片元素
-      const lazyImages = document.querySelectorAll(".placeholder");
+      const lazyImages = document.querySelectorAll(".img_placeholder");
 
       // 创建 Intersection Observer 实例
       const observer = new IntersectionObserver(
