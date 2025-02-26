@@ -7,35 +7,34 @@
     <style>
       /* 设置占位符样式 */
       .placeholder {
-        width: 50vw;
-        height: auto;
+        width: 60vw;
+        height: 28vw;
         background-color: #ccc;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
       }
     </style>
   </head>
   <body>
     <!-- 图片懒加载 -->
     <div class="container">
+      <img class="placeholder" data-src="imgs/30.jpg" />
+      <img class="placeholder" data-src="imgs/31.jpg" />
+      <img class="placeholder" data-src="imgs/32.jpg" />
+      <img class="placeholder" data-src="imgs/33.jpg" />
+      <img class="placeholder" data-src="imgs/34.jpg" />
+      <img class="placeholder" data-src="imgs/35.jpg" />
+      <img class="placeholder" data-src="imgs/36.jpg" />
+      <img class="placeholder" data-src="imgs/37.jpg" />
+      <img class="placeholder" data-src="imgs/38.jpg" />
+      <img class="placeholder" data-src="imgs/39.jpg" />
+      <img class="placeholder" data-src="imgs/40.jpg" />
+      <img class="placeholder" data-src="imgs/41.jpg" />
+      <img class="placeholder" data-src="imgs/42.jpg" />
+      <img class="placeholder" data-src="imgs/43.jpg" />
+      <img class="placeholder" data-src="imgs/44.jpg" />
       <img class="placeholder" data-src="imgs/45.jpg" />
-          <img class="placeholder" data-src="imgs/46.jpg" />
-          <img class="placeholder" data-src="imgs/47.jpg" />
-          <img class="placeholder" data-src="imgs/42.jpg" />
-          <img class="placeholder" data-src="imgs/43.jpg" />
-          <img class="placeholder" data-src="imgs/44.jpg" />
-          <img class="placeholder" data-src="imgs/39.jpg" />
-          <img class="placeholder" data-src="imgs/40.jpg" />
-          <img class="placeholder" data-src="imgs/41.jpg" />
-          <img class="placeholder" data-src="imgs/36.jpg" />
-          <img class="placeholder" data-src="imgs/37.jpg" />
-          <img class="placeholder" data-src="imgs/38.jpg" />
-          <img class="placeholder" data-src="imgs/33.jpg" />
-          <img class="placeholder" data-src="imgs/34.jpg" />
-          <img class="placeholder" data-src="imgs/35.jpg" />
-          <img class="placeholder" data-src="imgs/30.jpg" />
-          <img class="placeholder" data-src="imgs/31.jpg" />
-          <img class="placeholder" data-src="imgs/32.jpg" />
-        
+      <img class="placeholder" data-src="imgs/46.jpg" />
+      <img class="placeholder" data-src="imgs/47.jpg" />
     </div>
 
     <script>
@@ -48,13 +47,16 @@
           // entries 是一个 IntersectionObserverEntry 对象数组
           // 遍历每个 entry 判断是否在视口中
           entries.forEach((entry) => {
+            console.log("[ entry ]", entry, entry.isIntersecting);
             // 如果 entry 在视口中
             if (entry.isIntersecting) {
               // 获取 data-src 属性中的真实图片地址
               const realSrc = entry.target.getAttribute("data-src");
               // 将真实图片地址赋值给 src 属性，触发图片加载
-              entry.target.src = realSrc;
+              const img = entry.target;
+              img.src = realSrc;
               // 图片加载后，不再监听
+              img.onload = () => img.removeAttribute("data-src");
               observer.unobserve(entry.target);
             }
           });

@@ -10,18 +10,58 @@
         width: 300px;
         height: 120px;
         position: relative;
+        margin-bottom: 50px;
       }
 
-      .exampleText {
+      #div1 .exampleText {
         position: absolute;
         inset: 25%;
         background-color: #c8c800;
       }
+
+      #div2 {
+        display: grid;
+        place-content: center;
+      }
+
+      #div3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #div4,
+      #div5 {
+        position: relative;
+      }
+
+      #div4 span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #div5 p {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        /* 前提条件，需要设置子元素宽高 */
+        width: fit-content;
+        height: fit-content;
+      }
     </style>
   </head>
   <body>
-    <div>
-      <span class="exampleText">示例文本</span>
+    <div id="div1">
+      <span class="exampleText">1. 使用inset</span>
     </div>
+    <div id="div2">2. 使用grid</div>
+    <div id="div3">3. 使用flex</div>
+    <div id="div4"><span>4. 使用定位+transform</span></div>
+    <div id="div5"><p>5. 使用定位2</p></div>
   </body>
 </html>
