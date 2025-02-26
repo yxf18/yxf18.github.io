@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SharedWorker</title>
+  </head>
+  <body>
+    <h1>使用SharedWorker发送消息</h1>
+    <button onclick="sendMessage()">发送消息</button>
+    <script>
+      const worker = new SharedWorker("./worker.js");
+      function sendMessage() {
+        worker.port.postMessage(
+          new Date().toLocaleString() + ": Send a message from SharedWorker..."
+        );
+      }
+    </script>
+  </body>
+</html>

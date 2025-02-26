@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lazy Loading Images</title>
+    <style>
+      /* 设置占位符样式 */
+      .placeholder {
+        width: 50vw;
+        height: auto;
+        background-color: #ccc;
+        margin-bottom: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 图片懒加载 -->
+    <div class="container">
+      <img class="placeholder" data-src="imgs/45.jpg" />
+          <img class="placeholder" data-src="imgs/46.jpg" />
+          <img class="placeholder" data-src="imgs/47.jpg" />
+          <img class="placeholder" data-src="imgs/42.jpg" />
+          <img class="placeholder" data-src="imgs/43.jpg" />
+          <img class="placeholder" data-src="imgs/44.jpg" />
+          <img class="placeholder" data-src="imgs/39.jpg" />
+          <img class="placeholder" data-src="imgs/40.jpg" />
+          <img class="placeholder" data-src="imgs/41.jpg" />
+          <img class="placeholder" data-src="imgs/36.jpg" />
+          <img class="placeholder" data-src="imgs/37.jpg" />
+          <img class="placeholder" data-src="imgs/38.jpg" />
+          <img class="placeholder" data-src="imgs/33.jpg" />
+          <img class="placeholder" data-src="imgs/34.jpg" />
+          <img class="placeholder" data-src="imgs/35.jpg" />
+          <img class="placeholder" data-src="imgs/30.jpg" />
+          <img class="placeholder" data-src="imgs/31.jpg" />
+          <img class="placeholder" data-src="imgs/32.jpg" />
+        
+    </div>
+
+    <script>
+      // 获取所有带有懒加载标记的图片元素
+      const lazyImages = document.querySelectorAll(".placeholder");
+
+      // 创建 Intersection Observer 实例
+      const observer = new IntersectionObserver(
+        (entries) => {
+          // entries 是一个 IntersectionObserverEntry 对象数组
+          // 遍历每个 entry 判断是否在视口中
+          entries.forEach((entry) => {
+            // 如果 entry 在视口中
+            if (entry.isIntersecting) {
+              // 获取 data-src 属性中的真实图片地址
+              const realSrc = entry.target.getAttribute("data-src");
+              // 将真实图片地址赋值给 src 属性，触发图片加载
+              entry.target.src = realSrc;
+              // 图片加载后，不再监听
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          rootMargin: "0px 0px 50px 0px", // Load 50px before image is in view
+          threshold: 0.1, // Trigger when 10% of the image is visible
+        }
+      );
+
+      // 遍历所有带有懒加载标记的图片元素，开始监听
+      lazyImages.forEach((image) => {
+        observer.observe(image);
+      });
+    </script>
+  </body>
+</html>

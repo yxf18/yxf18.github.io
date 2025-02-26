@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BroadcastChannel</title>
+  </head>
+  <body>
+    <h1>使用BroadcastChannel发送消息</h1>
+    <button onclick="sendMessage()">发送消息</button>
+    <script>
+      const channel = new BroadcastChannel("myChannel");
+      // 在一个标签页中创建一个BroadcastChannel
+      function sendMessage() {
+        // 发送消息
+        channel.postMessage(
+          new Date().toLocaleString() + ": Send a message from BroadcastChannel..."
+        );
+      }
+    </script>
+  </body>
+</html>

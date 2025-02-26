@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background: pink;
+        color: blueviolet;
+        margin-bottom: 10px;
+      }
+
+      #div1 {
+        /*1.第一种方式是利用 aspect-ratio 来实现*/
+        width: 50%;
+        aspect-ratio: 2 / 1; /* 宽 / 高 */
+      }
+
+      #div2 {
+        /*2.第二种方式是利用 vw 来实现*/
+        width: 50vw;
+        height: 25vw;
+      }
+
+      #div3 {
+        /*3.第三种方式是利用元素的 margin/padding 百分比是相对父元素 width 的性质来实现*/
+        width: 50%;
+        height: 0;
+        padding-top: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">宽高自适应盒子1</div>
+    <div id="div2">宽高自适应盒子2</div>
+    <div id="div3">宽高自适应盒子3</div>
+  </body>
+</html>

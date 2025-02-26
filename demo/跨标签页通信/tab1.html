@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>localStorage</title>
+  </head>
+  <body>
+    <h1>使用localStorage发送消息</h1>
+    <button onclick="sendMessage()">发送消息</button>
+    <script>
+      function sendMessage() {
+        localStorage.setItem(
+          "message",
+          new Date().toLocaleString() +
+            ": Send a message from localStorage..."
+        );
+      }
+    </script>
+  </body>
+</html>
